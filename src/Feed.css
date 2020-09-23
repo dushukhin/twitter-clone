@@ -5,6 +5,17 @@
   overflow-y: scroll;
 }
 
+/* Hide scrollbarr for Chrome, Safari, Opera */
+.feed::-webkit-scrollbar {
+  display: none;
+}
+
+/* Hide scrollbarr for IE, Edge and Firefox  */
+.feed {
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+}
+
 .feed__header {
   position: sticky;
   top: 0;
