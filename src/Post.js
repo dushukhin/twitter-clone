@@ -20,7 +20,7 @@ function Post({
   return (
     <div className="post">
       <div className="post__avatar">
-        <Avatar src="https://avatars1.githubusercontent.com/u/31204077?s=200&v=4" />
+        <Avatar src={ avatar } />
       </div>
 
       <div className="post__body">
@@ -28,21 +28,20 @@ function Post({
         <div className="post__header">
           <div className="post__headertext">
             <h3>
-              Dushukhin Igor{" "}
+              { displayName }{" " }
               <span className="post__headerSpecial">
-                <VerifiedUser className="post__badge" />
-                @Ingwar92
+                {verified && <VerifiedUser className="post__badge" />} @{ username }
               </span>
             </h3>
           </div>
 
           <div className="post__headerDescription">
-            <p>build Twitter clone!</p>
+            <p>{ text }</p>
           </div>
         </div>
 
         <img
-          src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcR_rr88ZCxi69-M50z5fj2PDkX0Xl_W0Q3InQ&usqp=CAU"
+          src={ image }
           alt=""
         />
 
